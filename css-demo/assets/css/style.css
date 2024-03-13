@@ -1,0 +1,17 @@
+/* ---- CSS Demo ---- */
+
+html{
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body{
+    background-color:#5EC8F2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
