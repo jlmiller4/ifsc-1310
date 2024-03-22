@@ -1,5 +1,8 @@
 /* ---- CSS Demo ---- */
 
+
+/*Boxing Sizing*/
+
 html{
     box-sizing: border-box;
 }
@@ -9,9 +12,344 @@ html{
     box-sizing: inherit;
 }
 
+
+/*---------- Responsive Image --------*/
+
+img{
+  max-width:100%;
+  /*controls size of image*/
+}
+
+/*---------- Utility Classes --------*/
+
+.container{
+  max-width: 800px;
+  width: 60pw; /*viewport width*/
+  margin:40px auto;
+  /*classes applied to elements that will restrict their width and center on page/ applies to every element with the class container*/
+}
+
+.img-right{
+  float:right;
+  margin:10px 0 10px 20px;
+  border: 10px solid #000;
+  padding:8px;
+}
+
+.img-left{
+  float:left;
+  margin:10px 20px 10px 0;
+  border: 10px solid #000;
+  padding:8px;
+}
+
+.img-center{
+  display:block;
+  margin:20px auto;
+  border: 10px solid #000;
+  padding:8px;
+  border-radius:50px;
+}
+/*---------- Global Styles ----------*/
+
 body{
-    background-color:#5EC8F2;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+header.primary{
+  background-color:#3ECBE6;
+background-image: background-color: #DFDBE5;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    color: #fff;
+    text-align: center;
+    /*adding shadows*/
+   text-shadow: 2px 2px #000;
+  /*adding space to the bottom of box (long version: top, right, bottom, left or top/bottom left/right 20px 10px)*/
+   padding:20px 10px;
+}
+
+header.primary h1{ /*or header.primary .hgroup h1*/
+  font-size: 2.5rem;
+  /* rem (relative to font-size of the root element aka default) 16 pixels, vh (1& of the height), vw (1% of the width), % is relative to the parent element*/
+  margin:20px 0 0;
+  /*removing unwanted space between elements*/
+}
+/* selector to select "Building the Modern Web hyperlink*/
+header.primary h1 a{
+  color: #fff;
+  /*removing underline*/
+  text-decoration: none;
+}
+
+header.primary h2{
+  margin: 1;
+  font-size: 1.3rem;
+}
+header.primary nav{
+  /*center element on page mainly left and right needs to be auto top and bottom could be a px value*/
+  margin: auto;
+}
+
+header.primary ul{
+  /*making list centered*/
+  padding: 10px 0;
+  /*three properties*/
+  display: flex;
+  flex-direction: row; /*row, column, and reverse of both*/
+  justify-content: space-around;
+  
+}
+
+header.primary ul li{
+  /*remove bullets*/
+  list-style-type: none;
+}
+
+ /*parent element*/
+header.primary nav a{
+  color: #fff;
+  text-decoration: none;
+  background-color: #000;
+  /*red, green, blue, alpha/transparent mainly makes the background transparent*/
+  background-color:#657574;
+  /*increasing background size*/
+  padding: 5px 10px;
+  /*rounding the squares*/
+  border-radius:20px;
+  /*borders: thickness, stroke, color */
+  border: . solid #000;
+  /*takes a value in secs to give a glow after hover*/
+  transition:.6s;
+}
+
+header.primary nav a:hover{
+  /*impact the element when hovered*/
+  background-color:rgba(1,10,6,.8);
+  /*can add underline back: text-decorations:underline; */
+}
+
+/*default content*/
+#content{
+  line-height: 1.7;
+  /*line spacing*/
+}
+
+#content h2{
+  color: #3ECBE6;
+  border-bottom:2px solid rgba(1,10,6,.8);
+}
+
+#content h3{
+  color:#3ECBE6;
+  border-left: 4px solid rgba(1,10,6,.8);
+  padding: 2.5px;
+}
+
+#blog{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  gap:3rem;
+  /*adding borders/ can shorthand*/
+  border-bottom: 2px solid #3ECBE6;
+  padding-bottom: 2rem;
+  border-top: 2px solid #3ECBE6;
+  padding-top: 2rem;
+  flex-wrap: wrap;
+}
+
+#blog h2{
+  /*make it wrap*/
+  flex:0 0 100%;
+  margin:0;
+  text-align:center;
+  color:#225E8F;
+}
+
+#blog .post{
+  /*shadow around the article boxes*/
+  box-shadow: 0 9px 16px rgba(0,0,0,.6);
+  padding: 15px;
+  /*round the squares*/
+  border-radius: 3px;
+  font-size: .9rem
+  /* to make the hover smoother*/
+    transition:1s;
+  flex:1;
+}
+
+#blog figure{
+  /*chanaged "image caption"*/
+  margin:0;
+}
+#blog figcaption{
+  /*chanaged "image caption"*/
+  text-transform: uppercase;
+  font-size: .5rem;
+  text-align:center;
+  color:lightgrey;
+}
+#blog header{
+  /*padding or margin from the image caption on date*/
+  padding-top:10px;
+  font-size:.7rem;
+  color:grey;
+}
+
+#blog header h2{
+  margin:0;
+  /*moved "articie title closer to the date"*/
+}
+
+#blog a{ /*and or #blog h2 a*/
+    color:#3ECBE6;
+}
+
+#blog .post:hover{ /*copied from #blog .post*/
+  box-shadow: 0 4px 9px rgba(0,0,0,.10);
+}
+
+#practice h2{
+  color: #3ECBE6;
+  border-bottom:2px dotted rgba(1,10,6,.8);
+}
+
+/*add css to link and text before picture*/
+
+table{
+  border: 1px solid #000;
+  width: 100%;
+  margin 20px 0;
+  border-collapse:collapse;
+}
+caption{
+  font-width:bold;
+  margin:10px;
+}
+
+th{
+  background-color:#3745E6;
+  color:#fff;
+  padding:8px;
+}
+
+tr:nth-child(even){
+  background-color:lightgrey;
+}
+
+tr:hover{
+  background-color:grey;
+}
+
+td:nth-child(2),td:nth-child(3){
+  
+}
+
+td:nth-child(n+2){
+  text-align: right;
+}
+
+td{
+  border:2.5px solid #000;
+  padding:2px;
+}
+
+#practice ol{
+  list-style-type:lower-decimal;
+}
+
+#practice ul ul{
+  list-style-type:square;
+}
+
+dl dt{
+  font-weight:bold;
+  /*bold terms*/
+  padding-top:20px;
+}
+
+dl dd{
+  margin:0;
+}
+
+dd + dt{
+  margin-top:1rem;
+}
+
+#practice blockquote{
+  border: 4px double #c0c0c0;
+  paddomg: 20px 40px;
+  margin: 40px 80px;
+  border-radius: 30px 0;
+  background-color: #3b639b;
+  color:#fff;
+  line-height:1.4;
+  text-shadow: 1px 1px #000;
+}
+
+#practice blockquote cite{
+  display:block;
+  text-align:right;
+  font-size:.7rem;
+}
+
+
+
+
+
+
+
+aside[role="complementary"] /*attribute*/ { /*"sample sidebar item" */
+  background-color:#657574;
+  color:#fff;
+  padding:1.25rem;
+}
+
+aside .container{
+  display:flex;
+  flex-direction: row;
+  justify-content:center; /*wont work already had width*/
+  gap:40px;
+}
+
+aside .container a{ /*"Read more" can add last of type to mainly target ceratin children from each other*/
+  display:block;
+  color:#fff;
+  text-align:right;
+  margin-top: .5rem;
+}
+
+aside .widget footer{/*widget footer*/
+  display:none;
+}
+
+#colophon{ /*footer at the bottom*/
+  background-color: #3ECBE6;
+  text-align:center;
+  padding:10px;
+  /*get rid of white space around the footer to connect with widget*/
+  color:#fff;
+  font-size: 1.3rem;
+  background-color:#3ECBE6;
+background-image: background-color: #DFDBE5;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='105' viewBox='0 0 80 105'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='death-star' fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M20 10a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm15 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zM20 75a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zm30-65a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V10zm0 65a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V75zM35 10a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zM5 45a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10zm60 35a5 5 0 0 1 10 0v50a5 5 0 0 1-10 0V45zm0-35a5 5 0 0 1 10 0v20a5 5 0 0 1-10 0V10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    color:#fff;
+}
+
+
+
+
+/*bottom of document*/
+/* starts to break in header.primary nav a for smaller screens (will do in second part of this course) for screen and print*/
+@media screen and (max-width:600px){
+  header.primary ul{
+    flex-direction: column;
+    gap:10px;
+    max-width: 250px;
+    margin:auto;
+  }
+  header.primary nav a{
+    display:block;
+  }
+}
 
