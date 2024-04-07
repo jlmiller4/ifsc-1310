@@ -117,9 +117,8 @@ header.primary nav a{
   /*rounding the squares*/
   border-radius:20px;
   /*borders: thickness, stroke, color */
-  border: . solid #000;
+  border: 3px solid #000;
   /*takes a value in secs to give a glow after hover*/
-  transition:0.6s;
 }
 
 header.primary nav a:hover{
@@ -174,8 +173,6 @@ header.primary nav a:hover{
   border-radius: 3px;
   font-size: .9rem
   /* to make the hover smoother*/
-    transition:1s;
-  flex:1;
 }
 
 #blog figure{
@@ -219,11 +216,11 @@ header.primary nav a:hover{
 table{
   border: 1px solid #000;
   width: 100%;
-  margin 20px 0;
+  margin: 20px 0;
   border-collapse:collapse;
 }
 caption{
-  font-width:bold;
+  font-style:bold;
   margin:10px;
 }
 
@@ -275,7 +272,7 @@ dd + dt{
 
 #practice blockquote{
   border: 4px double #c0c0c0;
-  paddomg: 20px 40px;
+  padding: 20px 40px;
   margin: 40px 80px;
   border-radius: 30px 0;
   background-color: #3b639b;
