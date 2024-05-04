@@ -1,0 +1,147 @@
+/* ---- SpaceX Dragon ---- */
+/*font color #568BFA*/
+
+
+/*Boxing Sizing*/
+
+html{
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/*---------- Utility Classes --------*/
+.replace-scott{ /*get help*/
+  background: url("https://cdn.freebiesupply.com/logos/large/2x/spacex-logo-png-transparent.png");
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/*---------- Global Styles ----------*/
+body{
+  font-family: "Lucida Console", "Courier New", monospace;
+  background-color:lightgrey;
+  font-size:15px;
+}
+
+header.primary{
+  background-image: url("https://th.bing.com/th/id/R.11ebdd692e2d59b869a2e2b07dccf3bd?rik=DF2NeRMyvDjl7w&pid=ImgRaw&r=0");
+  background-repeat: no-repeat;
+  background-position:center top;
+  background-attachment:fixed;
+  background-size: 1150px 335px;
+  text-align:center;
+  text-shadow: 1px 1px #000;
+  padding: 30px;
+  opacity: 0.93;
+}
+
+header.primary h1{
+  /*place holder until logo is updated*/
+  color:#fff;
+}
+
+header.primary h2{
+  color:#fff;
+  /*potentially increase size and change font*/
+}
+
+header.primary nav{
+  margin:auto;
+}
+
+header.primary ul{
+  display:flex;
+  justify-content:space-between;
+  padding:10px;
+}
+
+header.primary ul li{
+  list-style-type:none;
+}
+
+header.primary nav a{
+  text-decoration:none;
+  color:#fff;
+  background-color:rgba(74,206,250,.6);
+  padding:10px 50px;
+  border-radius:20px;
+  transition:.10s;
+}
+
+header.primary nav a:hover{
+  background-color:rgba(145,237,255,.4);
+  text-decoration:underline;
+}
+
+/*text under first private spacecraft in introduction*/
+#content{ 
+  text-align:center;
+  line-height:1.7;
+}
+
+/*first private spacecraft to the space station*/
+#content h2{
+  border-top: 2px solid #568BFA;
+  color:#005376;
+  padding-top:15px; 
+}
+
+#content h3{
+  border-top: 2px solid #568BFA;
+  font-size: 1.5rem;
+}
+
+/*Configurations*/
+
+#blog {
+display:flex;
+flex-direction:row;
+justify-content:space-between;
+}
+
+/*cargo, crew, dragon lab*/
+#blog h2{
+  /*make it wrap*/
+  flex:0 0 100%;
+  margin:0;
+  text-align:center;
+}
+
+#blog .post{
+  box-shadow: 0 9px 16px rgba(0,0,0,.6);
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  flex:1;
+}
+
+#blog figure{
+  margin:0;
+}
+
+#blog figcaption{
+  /*chanaged "image caption"*/
+  text-transform: uppercase;
+  font-size: .8rem;
+  color:grey;
+}
+
+#blog a{
+    color:#568BFA;
+}
+
+#blog .post:hover{ 
+  box-shadow: 0 4px 9px rgba(0,0,0,.10);
+}
+
+#colophon{ /*footer at the bottom*/
+  background-color: #3ECBE6;
+  padding:10px;
+  color:#fff;
+  font-size: .9rem;
+}
